@@ -71,9 +71,7 @@ export default {
    
     methods: {
         next(i) {
-         
           this.$refs[i].toggle();
-          
           if(i!=3)
           this.$refs[i+1].toggle();
           this.$set(this.values, i-1, 100)
@@ -82,23 +80,17 @@ export default {
           },500)
          this.success()
         },
-        
         submit(f) {
           f.valid = true;
           this.applicationForm[f.fName] =f.valid
           console.log(this.applicationForm)
-         this.next(f.ref);
-  
+          this.next(f.ref);
         },
-       
-      
         success() {
           if(this.applicationForm.personalInfo && this.applicationForm.expInfo && this.applicationForm.skillsInfo) {
             this.successMsg= "Details captured successfully! we will get back to you soon";
           } 
         }
-       
-       
     }
 }
 </script>
