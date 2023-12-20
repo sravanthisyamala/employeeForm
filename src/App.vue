@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <div class="container">
+      <div class="row">
+      <div class="logo col-3">
+      <img class="img-fluid" src="./assets/logo.png">
+    </div>
+    <div class="col-6 text-center">
+      <h1>WELCOME TO INMAR</h1>
+      <p> Please fill in your details in the below form</p>
+    </div>
+  </div>
+</div>
+    </header>
+  
+    <ApplicationForm/>
+   
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ApplicationForm from './components/ApplicationForm.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ApplicationForm
   }
 }
 </script>
@@ -21,8 +35,8 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 </style>
